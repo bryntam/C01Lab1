@@ -6,7 +6,7 @@ public class UserRegistration {
 
     public static boolean isUsernameValid(String username) {
         // TODO: implement validation logic
-        if (username.length()>=5 & username.length()<=15)
+        if (username.length()>=5 && username.length()<=15)
             return true;
         else
             return false;
@@ -22,23 +22,31 @@ public class UserRegistration {
 
     public static boolean register(String username, String password) {
         // TODO: implement registration logic using UserDatabase
-        if (service.UserDatabase.userMap.put(username, password)) {
-            //! HOW TO CHECK IF IT WORKS
-        }
-        else
+        if (!isUsernameValid(username) || !isPasswordValid(password)) {
             return false;
+        }
+        // Check if username already exists
+        if (UserDatabase.userMap.containsKey(username)) {
+            return false;
+        }
+        
+        // Register the user
+        UserDatabase.userMap.put(username, password);
+        return true;
     }
 
     public static void main(String[] args) {
         // TODO: prompt for username and password, then call register()
 
-        Scanner myObj = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         System.out.println("Enter username");
-        String userName = myObj.nextLine();
+        String userName = s.nextLine();
 
         System.out.println("Enter username");
-        String password = myObj.nextLine();
+        String password = s.nextLine();
 
         register(userName, password);
+
+        s.close();
     }
 }
