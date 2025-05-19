@@ -23,6 +23,8 @@ public class UserLogin {
     public static void main(String[] args) {
         // TODO: prompt for username and password, then call login()
         Scanner s = new Scanner(System.in);  
+        System.out.println("User Login");
+
         System.out.println("Enter username");
         String inputusername = s.nextLine();
 

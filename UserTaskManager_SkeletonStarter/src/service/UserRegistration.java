@@ -39,10 +39,11 @@ public class UserRegistration {
         // TODO: prompt for username and password, then call register()
 
         Scanner s = new Scanner(System.in);
+        System.out.println("User Registration");
         System.out.println("Enter username");
         String userName = s.nextLine();
 
-        System.out.println("Enter username");
+        System.out.println("Enter password");
         String password = s.nextLine();
 
         register(userName, password);
