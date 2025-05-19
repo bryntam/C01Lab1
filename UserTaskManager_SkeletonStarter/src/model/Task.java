@@ -6,31 +6,29 @@ public class Task {
     private boolean done;
 
     public Task(String title, String description) {
-        // TODO: initialize fields
+        this.title = title;
+        this.description = description;
+        this.done = false;
     }
 
     public String getTitle() {
-        // TODO: return title
-        return null;
+        return title;
     }
 
     public String getDescription() {
-        // TODO: return description
-        return null;
+        return description;
     }
 
     public boolean isDone() {
-        // TODO: return done status
-        return false;
+        return done;
     }
 
     public void markDone() {
-        // TODO: mark task as done
+        this.done = true;
     }
 
     @Override
     public String toString() {
-        // TODO: return string representation
-        return null;
+        return "Task: " + title + "Description: " + description + " Done Status: " + done;
     }
 }
