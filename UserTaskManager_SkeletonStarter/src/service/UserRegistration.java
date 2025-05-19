@@ -7,7 +7,7 @@ public class UserRegistration {
     public static boolean isUsernameValid(String username) {
         // TODO: implement validation logic
         if (username.length()>=5 && username.length()<=15)
-            return true;
+            return false; //ADDED BUG TO MAIN
         else
             return false;
     }
