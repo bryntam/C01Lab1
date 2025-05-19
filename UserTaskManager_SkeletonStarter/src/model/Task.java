@@ -29,6 +29,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task: " + title + "Description: " + description + " Done Status: " + done;
+        return "Task: " + title + " Description: " + description + " Done Status: " + done;
     }
 }
